@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-site-title>مدونة أيوب إعزة التعليمية</title>
+<meta name="description" content="مدونة تعليمية لنشر المحتوى والدروس">
+<meta property="og:title" content="مدونة أيوب إعزة">
+<meta property="og:description" content="محتوى تعليمي مبسّط ومجاني">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B3A3B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='bold' font-size='16' fill='%23C89B3C' text-anchor='middle'%3Eع%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="logo"><span>ع</span> <span data-site-title>مدونة أيوب إعزة</span></a>
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">حول</a></li>
+      <li><a href="support.html">ادعم المحتوى</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-inner">
+      <span class="eyebrow" data-hero-eyebrow>محتوى تعليمي مجاني</span>
+      <h1 data-hero-title>نتعلم سوياً، خطوة بخطوة</h1>
+      <p data-hero-subtitle>مقالات ودروس مبسّطة أشاركها هنا مجاناً، بأسلوب واضح ومباشر.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#posts" class="btn btn-primary">تصفح المقالات</a>
+        <a href="support.html" class="btn btn-outline">ادعم المشروع 🤍</a>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="160" cy="160" r="150" stroke="#C89B3C" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>
+        <rect x="70" y="60" width="150" height="190" rx="10" fill="#28504F" stroke="#C89B3C" stroke-width="3"/>
+        <line x1="70" y1="95" x2="220" y2="95" stroke="#F1E9D8" stroke-width="2" opacity="0.5"/>
+        <line x1="95" y1="120" x2="195" y2="120" stroke="#F1E9D8" stroke-width="2" opacity="0.7"/>
+        <line x1="95" y1="140" x2="205" y2="140" stroke="#F1E9D8" stroke-width="2" opacity="0.7"/>
+        <line x1="95" y1="160" x2="180" y2="160" stroke="#F1E9D8" stroke-width="2" opacity="0.7"/>
+        <line x1="95" y1="180" x2="195" y2="180" stroke="#F1E9D8" stroke-width="2" opacity="0.7"/>
+        <line x1="95" y1="200" x2="160" y2="200" stroke="#F1E9D8" stroke-width="2" opacity="0.7"/>
+        <path d="M215 40 L250 75 L200 125 L165 90 Z" fill="#E4572E"/>
+        <path d="M165 90 L152 128 L190 115 Z" fill="#FBF7EE"/>
+        <circle cx="238" cy="220" r="26" fill="#C89B3C"/>
+        <path d="M228 220 l7 7 l14 -16" stroke="#1B3A3B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section container reveal" id="posts">
+  <div class="section-head">
+    <h2>أحدث المقالات</h2>
+    <span class="tag">يتم تحديث القائمة تلقائياً من لوحة التحكم</span>
+  </div>
+  <div id="featured-post"></div>
+  <div class="posts-grid" id="posts-grid">
+    <div class="empty-state">جاري تحميل المقالات...</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p data-footer-text>مدونة أيوب إعزة التعليمية — محتوى مجاني للجميع</p>
+    <p style="margin-top:10px;">
+      <a href="/admin">لوحة التحكم</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
