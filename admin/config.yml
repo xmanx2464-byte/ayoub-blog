@@ -25,7 +25,9 @@ collections:
               - { label: "التصنيف", name: "tag", widget: "string", required: false }
               - { label: "ملخص قصير", name: "excerpt", widget: "text", required: false }
               - { label: "تاريخ النشر", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-              - { label: "محتوى المقال", name: "body", widget: "markdown" }
+              - { label: "صورة الغلاف", name: "cover_image", widget: "image", required: false, hint: "تظهر في بطاقة المقال وأعلى صفحته" }
+              - { label: "رابط فيديو يوتيوب (اختياري)", name: "video_url", widget: "string", required: false, hint: "مثال: https://www.youtube.com/watch?v=xxxxxxxx — يظهر مضمّناً أعلى المقال" }
+              - { label: "محتوى المقال", name: "body", widget: "markdown", media_folder: "/images", public_folder: "/images" }
 
   - name: "settings"
     label: "إعدادات الموقع"
@@ -35,6 +37,17 @@ collections:
         name: "settings"
         fields:
           - { label: "اسم الموقع", name: "site_title", widget: "string" }
+          - { label: "الوصف القصير للموقع", name: "site_tagline", widget: "string" }
+          - { label: "شعار الموقع (صورة، اختياري)", name: "site_logo", widget: "image", required: false }
+          - { label: "شارة أعلى العنوان الرئيسي", name: "hero_eyebrow", widget: "string" }
+          - { label: "العنوان الرئيسي", name: "hero_title", widget: "string" }
+          - { label: "الوصف تحت العنوان الرئيسي", name: "hero_subtitle", widget: "text" }
+          - { label: "نص صفحة (حول)", name: "about_text", widget: "text" }
+          - { label: "مقدمة صفحة الدعم المالي", name: "support_intro", widget: "text" }
+          - { label: "نص التذييل", name: "footer_text", widget: "string" }
+          - { label: "رابط PayPal", name: "paypal_url", widget: "string", required: false, hint: "مثال: https://paypal.me/username" }
+          - { label: "رابط Ko-fi", name: "kofi_url", widget: "string", required: false, hint: "مثال: https://ko-fi.com/username" }
+          - { label: "رابط Buy Me a Coffee", name: "buymeacoffee_url", widget: "string", required: false }          - { label: "اسم الموقع", name: "site_title", widget: "string" }
           - { label: "الوصف القصير للموقع", name: "site_tagline", widget: "string" }
           - { label: "شارة أعلى العنوان الرئيسي", name: "hero_eyebrow", widget: "string" }
           - { label: "العنوان الرئيسي", name: "hero_title", widget: "string" }
