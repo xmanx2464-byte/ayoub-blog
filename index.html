@@ -68,7 +68,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p data-footer-text>مدونة أيوب إعزة التعليمية — محتوى مجاني للجميع</p>
+    <p data-footer-text>مدونة أيوب إعزى التعليمية — محتوى مجاني للجميع</p>
     <p style="margin-top:10px;">
       <a href="/admin">لوحة التحكم</a>
     </p>
@@ -76,6 +76,12 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {});
+  }
+</script>
 <script src="script.js"></script>
 </body>
 </html>
