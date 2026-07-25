@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم — مدونة أيوب إعزى</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B3A3B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='bold' font-size='16' fill='%23C89B3C' text-anchor='middle'%3Eع%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body">
+
+<!-- ===== شاشة الدخول ===== -->
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <div class="gate-logo">ع</div>
+    <h1>لوحة تحكم أيوب إعزى</h1>
+    <p>سجّل دخولك لإدارة المحتوى، النشر، والإعدادات</p>
+    <button id="gate-login-btn" class="btn-gold">تسجيل الدخول</button>
+    <a href="index.html" class="gate-back">← العودة للموقع</a>
+  </div>
+</div>
+
+<!-- ===== اللوحة الفعلية ===== -->
+<div id="app" class="dash-app hidden">
+
+  <aside class="dash-sidebar">
+    <div class="dash-brand">
+      <div class="dash-avatar" id="sidebar-avatar">ع</div>
+      <div>
+        <strong>أيوب إعزى</strong>
+        <span>لوحة التحكم</span>
+      </div>
+    </div>
+    <nav class="dash-nav">
+      <a href="#overview" class="dash-nav-link active" data-target="overview">📊 نظرة عامة</a>
+      <a href="#posts" class="dash-nav-link" data-target="posts">📝 المقالات</a>
+      <a href="#settings" class="dash-nav-link" data-target="settings">⚙️ إعدادات الموقع</a>
+      <a href="#support" class="dash-nav-link" data-target="support">💛 الدعم المالي</a>
+      <a href="#branding" class="dash-nav-link" data-target="branding">🖼️ الشعار والصورة</a>
+    </nav>
+    <div class="dash-sidebar-footer">
+      <a href="index.html" target="_blank" class="dash-ghost-btn">👁️ معاينة الموقع</a>
+      <button id="logout-btn" class="dash-ghost-btn danger">تسجيل الخروج</button>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+    <header class="dash-topbar">
+      <div>
+        <h2 id="topbar-title">نظرة عامة</h2>
+        <p id="topbar-sub">مرحباً بك من جديد 👋</p>
+      </div>
+      <div id="save-status" class="save-status"></div>
+    </header>
+
+    <div id="loading" class="dash-loading">جاري تحميل بيانات الموقع...</div>
+
+    <!-- نظرة عامة -->
+    <section id="section-overview" class="dash-section">
+      <div class="stats-grid" id="stats-grid"></div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>أحدث المقالات</h3>
+          <button class="btn-gold small" data-nav="posts">+ مقال جديد</button>
+        </div>
+        <div id="recent-posts-list" class="recent-list"></div>
+      </div>
+    </section>
+
+    <!-- المقالات -->
+    <section id="section-posts" class="dash-section hidden">
+      <div class="panel-head">
+        <h3>إدارة المقالات</h3>
+        <button id="add-post-btn" class="btn-gold small">+ مقال جديد</button>
+      </div>
+      <div id="posts-editor-list"></div>
+    </section>
+
+    <!-- إعدادات الموقع -->
+    <section id="section-settings" class="dash-section hidden">
+      <div class="panel">
+        <h3>معلومات الموقع العامة</h3>
+        <div class="form-grid" id="settings-form"></div>
+      </div>
+      <button id="save-settings-btn" class="btn-gold">💾 حفظ إعدادات الموقع</button>
+    </section>
+
+    <!-- الدعم المالي -->
+    <section id="section-support" class="dash-section hidden">
+      <div class="panel">
+        <h3>روابط الدعم المالي</h3>
+        <p class="hint">تظهر هذه الروابط في صفحة "ادعم المحتوى" على الموقع مباشرة.</p>
+        <div class="form-grid" id="support-form"></div>
+      </div>
+      <button id="save-support-btn" class="btn-gold">💾 حفظ روابط الدعم</button>
+    </section>
+
+    <!-- الشعار والصورة -->
+    <section id="section-branding" class="dash-section hidden">
+      <div class="panel">
+        <h3>شعار الموقع / صورتك الشخصية</h3>
+        <p class="hint">هذه الصورة تظهر في رأس الموقع بدل الحرف الافتراضي، وفي لوحة التحكم هذه أيضاً.</p>
+        <div class="branding-row">
+          <div class="branding-preview" id="branding-preview">ع</div>
+          <div>
+            <input type="file" id="logo-upload" accept="image/*">
+            <button id="save-logo-btn" class="btn-gold small">💾 حفظ الصورة</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
